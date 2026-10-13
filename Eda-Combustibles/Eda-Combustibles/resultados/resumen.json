@@ -1,0 +1,28 @@
+{
+  "registros": 1134,
+  "pares_validos": 1133,
+  "precios_ausentes": 1,
+  "diesel_supera_gasolina": 75,
+  "porcentaje_diesel_supera_gasolina": 6.619593998234775,
+  "diferencia_media_pares": 0.08511032656663725,
+  "maximos": {
+    "Gasolina 95": {
+      "precio": 2.14,
+      "año": 2022,
+      "semana": 26
+    },
+    "Diésel": {
+      "precio": 2.1,
+      "año": 2022,
+      "semana": 27
+    }
+  },
+  "entorno": {
+    "python": "3.14.7",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "plotly": "7.1.0"
+  },
+  "csv_sha256": "402b844a57f272a1096019b6f3ea01d5620ec8de955787b064b7a1cccadded86"
+}
