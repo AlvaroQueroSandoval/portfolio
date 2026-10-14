@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sube un Sudoku, revisa las cifras detectadas y obtén una solución verificada.">
+  <title>SudokuVision · De la imagen a la solución</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-icon" aria-hidden="true">9</span> Sudoku<span>Vision</span></a><span class="project-label">Visión artificial + lógica</span></header>
+<main>
+  <div class="intro"><div><p class="eyebrow">UN SUDOKU, PASO A PASO</p><h1>Tu imagen.<br>Una solución <em>verificada.</em></h1><p class="lead">Sube un tablero, comprueba sus números y deja que la lógica haga el resto.</p></div><div class="intro-note"><span>01 &nbsp; Sube</span><span>02 &nbsp; Revisa</span><span>03 &nbsp; Resuelve</span></div></div>
+  <div class="workspace">
+    <section class="panel source-panel" aria-labelledby="source-title">
+      <div class="section-heading"><span class="step">01</span><h2 id="source-title">La imagen de partida</h2></div>
+      <label class="dropzone" id="dropzone" for="image">
+        <span class="upload-icon" aria-hidden="true">↑</span><strong>Elige o arrastra tu imagen</strong><span>PNG o JPG · hasta 8 MB</span>
+        <input id="image" type="file" accept="image/png,image/jpeg">
+      </label>
+      <p class="hint">Tablero impreso completo, con buena luz. Mínimo 250 píxeles por lado. Las fotos borrosas o los números escritos a mano pueden necesitar corrección.</p>
+      <div id="preview-wrap" class="preview-wrap" hidden><img id="preview" alt="Tablero de Sudoku que estás revisando"><p id="filename" class="hint"></p></div>
+      <button type="button" class="primary full" id="read" disabled>Detectar números</button>
+      <div class="separator"><span>o empieza con un ejemplo</span></div>
+      <div class="example-row"><button type="button" class="secondary example" data-example="1">Ejemplo 1</button><button type="button" class="secondary example" data-example="2">Ejemplo 2</button><button type="button" class="secondary" id="manual">Introducir a mano</button></div>
+      <p class="privacy">La imagen se procesa en memoria y no se guarda en el servidor.</p>
+    </section>
+    <section class="panel board-panel" aria-labelledby="board-title">
+      <div class="section-heading"><span class="step">02</span><h2 id="board-title">Comprueba las pistas</h2><span id="clue-count" class="badge">0 pistas</span></div>
+      <p class="hint" id="board-help">Cada casilla es editable. Usa las flechas para moverte y Supr para borrar. Comprueba también las casillas que parezcan vacías.</p>
+      <div class="board" id="board" role="group" aria-label="Tablero editable de Sudoku" aria-describedby="board-help"></div>
+      <div class="legend"><span><i class="dot doubtful"></i>Dudosa</span><span><i class="dot conflict"></i>Conflicto</span><span><i class="dot calculated"></i>Calculada</span></div>
+      <div class="actions"><button type="button" id="solve" class="primary" disabled>Verificar y resolver</button><button type="button" id="reset" class="text-button">Empezar de nuevo</button></div>
+      <button type="button" id="edit" class="secondary full" hidden>Volver a mis pistas</button>
+    </section>
+  </div>
+  <div id="status" class="status neutral" role="status" aria-live="polite">Empieza con una imagen o introduce las pistas a mano.</div>
+  <section class="about"><div><h3>Reconocimiento asistido</h3><p>La lectura de imágenes puede equivocarse. Puedes revisar las pistas y corregir cualquier casilla antes de resolver.</p></div><div><h3>Una respuesta comprobada</h3><p>El solucionador verifica filas, columnas y bloques, y distingue una solución única de un tablero ambiguo.</p></div><div><h3>Sin inventar pistas</h3><p>Si faltan pistas o hay contradicciones, te lo indico. No modifico tus números para forzar una solución.</p></div></section>
+</main>
+<footer>Álvaro Quero Sandoval <span>Proyecto de visión artificial y desarrollo web</span></footer>
+</body></html>

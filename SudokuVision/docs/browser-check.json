@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "sudoku": 1,
+      "variant": "normal",
+      "uploaded_and_solved": true
+    },
+    {
+      "sudoku": 2,
+      "variant": "perspectiva",
+      "uploaded_and_solved": true
+    },
+    {
+      "sudoku": 3,
+      "variant": "sombra",
+      "uploaded_and_solved": true
+    },
+    {
+      "sudoku": 4,
+      "variant": "giro_90",
+      "uploaded_and_solved": true
+    },
+    {
+      "sudoku": 5,
+      "variant": "ruido_jpeg",
+      "uploaded_and_solved": true
+    }
+  ],
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "checks": [
+    "solve_without_checkbox",
+    "edit_restores_clues",
+    "conflict_feedback",
+    "editing_keeps_solve_available",
+    "reset",
+    "tiny_image_rejected",
+    "example_button"
+  ],
+  "javascript_errors": []
+}
