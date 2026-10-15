@@ -1,0 +1,44 @@
+{
+  "cemento_blanco": {
+    "id": "cemento_blanco",
+    "name": "Cemento Blanco II/A-L 42,5 R 25 Kg LAFARGE",
+    "unit": "saco de 25 kg",
+    "whole_units": true,
+    "price_gross": "10.41",
+    "vat": "21",
+    "supplier": "Pochiche",
+    "source": "https://pochiche.com/materiales-construccion/cemento-blanco-iial-425-r",
+    "checked_at": "2026-10-15T07:09:42+00:00",
+    "sku": "13001300",
+    "price_valid_until": "2026-10-30",
+    "reference": true
+  },
+  "cemento_gris": {
+    "id": "cemento_gris",
+    "name": "Cemento Cem II/ B-M (S-LL) 42,5 R 25 Kg CEMEX",
+    "unit": "saco de 25 kg",
+    "whole_units": true,
+    "price_gross": "6.75",
+    "vat": "21",
+    "supplier": "Pochiche",
+    "source": "https://pochiche.com/materiales-construccion/cem-ii-bm-sll-425-r",
+    "checked_at": "2026-10-15T07:09:42+00:00",
+    "sku": "13001139",
+    "price_valid_until": "2026-10-30",
+    "reference": true
+  },
+  "mortero": {
+    "id": "mortero",
+    "name": "Mortero Cementoso Mampostería MM30 25 Kg FASSA",
+    "unit": "saco de 25 kg",
+    "whole_units": true,
+    "price_gross": "2.90",
+    "vat": "21",
+    "supplier": "Pochiche",
+    "source": "https://pochiche.com/materiales-construccion/mortero-cementoso-mamposteria-mm30",
+    "checked_at": "2026-10-15T07:09:43+00:00",
+    "sku": "13004010",
+    "price_valid_until": "2026-10-30",
+    "reference": true
+  }
+}
